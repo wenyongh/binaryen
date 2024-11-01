@@ -1,0 +1,352 @@
+DWARF debug info
+================
+
+Contains section .debug_abbrev (133 bytes)
+Contains section .debug_info (254 bytes)
+Contains section .debug_str (240 bytes)
+Contains section .debug_line (133 bytes)
+
+.debug_abbrev contents:
+Abbrev table for offset: 0x00000000
+[1] DW_TAG_compile_unit	DW_CHILDREN_yes
+	DW_AT_producer	DW_FORM_strp
+	DW_AT_language	DW_FORM_data2
+	DW_AT_name	DW_FORM_strp
+	DW_AT_stmt_list	DW_FORM_sec_offset
+	DW_AT_comp_dir	DW_FORM_strp
+	DW_AT_low_pc	DW_FORM_addr
+	DW_AT_high_pc	DW_FORM_data4
+
+[2] DW_TAG_variable	DW_CHILDREN_no
+	DW_AT_type	DW_FORM_ref4
+	DW_AT_decl_file	DW_FORM_data1
+	DW_AT_decl_line	DW_FORM_data1
+	DW_AT_location	DW_FORM_exprloc
+
+[3] DW_TAG_array_type	DW_CHILDREN_yes
+	DW_AT_type	DW_FORM_ref4
+
+[4] DW_TAG_subrange_type	DW_CHILDREN_no
+	DW_AT_type	DW_FORM_ref4
+	DW_AT_count	DW_FORM_data1
+
+[5] DW_TAG_base_type	DW_CHILDREN_no
+	DW_AT_name	DW_FORM_strp
+	DW_AT_encoding	DW_FORM_data1
+	DW_AT_byte_size	DW_FORM_data1
+
+[6] DW_TAG_base_type	DW_CHILDREN_no
+	DW_AT_name	DW_FORM_strp
+	DW_AT_byte_size	DW_FORM_data1
+	DW_AT_encoding	DW_FORM_data1
+
+[7] DW_TAG_subprogram	DW_CHILDREN_yes
+	DW_AT_low_pc	DW_FORM_addr
+	DW_AT_high_pc	DW_FORM_data4
+	DW_AT_frame_base	DW_FORM_exprloc
+	DW_AT_linkage_name	DW_FORM_strp
+	DW_AT_name	DW_FORM_strp
+	DW_AT_decl_file	DW_FORM_data1
+	DW_AT_decl_line	DW_FORM_data1
+	DW_AT_prototyped	DW_FORM_flag_present
+	DW_AT_type	DW_FORM_ref4
+	DW_AT_external	DW_FORM_flag_present
+
+[8] DW_TAG_formal_parameter	DW_CHILDREN_no
+	DW_AT_location	DW_FORM_exprloc
+	DW_AT_name	DW_FORM_strp
+	DW_AT_decl_file	DW_FORM_data1
+	DW_AT_decl_line	DW_FORM_data1
+	DW_AT_type	DW_FORM_ref4
+
+[9] DW_TAG_variable	DW_CHILDREN_no
+	DW_AT_location	DW_FORM_exprloc
+	DW_AT_name	DW_FORM_strp
+	DW_AT_decl_file	DW_FORM_data1
+	DW_AT_decl_line	DW_FORM_data1
+	DW_AT_type	DW_FORM_ref4
+
+[10] DW_TAG_pointer_type	DW_CHILDREN_no
+	DW_AT_type	DW_FORM_ref4
+
+
+.debug_info contents:
+0x00000000: Compile Unit: length = 0x000000fa version = 0x0004 abbr_offset = 0x0000 addr_size = 0x04 (next unit at 0x000000fe)
+
+0x0000000b: DW_TAG_compile_unit [1] *
+              DW_AT_producer [DW_FORM_strp]	( .debug_str[0x0000008b] = "clang version 18.1.2 (https://github.com/llvm/llvm-project 26a1d6601d727a96f4301d0d8647b5a42760ae0c)")
+              DW_AT_language [DW_FORM_data2]	(DW_LANG_C11)
+              DW_AT_name [DW_FORM_strp]	( .debug_str[0x00000070] = "main.c")
+              DW_AT_stmt_list [DW_FORM_sec_offset]	(0x00000000)
+              DW_AT_comp_dir [DW_FORM_strp]	( .debug_str[0x0000001f] = "/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang")
+              DW_AT_low_pc [DW_FORM_addr]	(0x0000000000000059)
+              DW_AT_high_pc [DW_FORM_data4]	(0x00000164)
+
+0x00000026:   DW_TAG_variable [2]  
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x0033 => {0x00000033} "char[19]")
+                DW_AT_decl_file [DW_FORM_data1]	("/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang/main.c")
+                DW_AT_decl_line [DW_FORM_data1]	(11)
+                DW_AT_location [DW_FORM_exprloc]	(DW_OP_addr 0x447)
+
+0x00000033:   DW_TAG_array_type [3] *
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x003f => {0x0000003f} "char")
+
+0x00000038:     DW_TAG_subrange_type [4]  
+                  DW_AT_type [DW_FORM_ref4]	(cu + 0x0046 => {0x00000046} "__ARRAY_SIZE_TYPE__")
+                  DW_AT_count [DW_FORM_data1]	(0x13)
+
+0x0000003e:     NULL
+
+0x0000003f:   DW_TAG_base_type [5]  
+                DW_AT_name [DW_FORM_strp]	( .debug_str[0x00000015] = "char")
+                DW_AT_encoding [DW_FORM_data1]	(DW_ATE_signed_char)
+                DW_AT_byte_size [DW_FORM_data1]	(0x01)
+
+0x00000046:   DW_TAG_base_type [6]  
+                DW_AT_name [DW_FORM_strp]	( .debug_str[0x00000077] = "__ARRAY_SIZE_TYPE__")
+                DW_AT_byte_size [DW_FORM_data1]	(0x08)
+                DW_AT_encoding [DW_FORM_data1]	(DW_ATE_unsigned)
+
+0x0000004d:   DW_TAG_variable [2]  
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x0033 => {0x00000033} "char[19]")
+                DW_AT_decl_file [DW_FORM_data1]	("/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang/main.c")
+                DW_AT_decl_line [DW_FORM_data1]	(14)
+                DW_AT_location [DW_FORM_exprloc]	(DW_OP_addr 0x45a)
+
+0x0000005a:   DW_TAG_variable [2]  
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x0067 => {0x00000067} "char[3]")
+                DW_AT_decl_file [DW_FORM_data1]	("/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang/main.c")
+                DW_AT_decl_line [DW_FORM_data1]	(18)
+                DW_AT_location [DW_FORM_exprloc]	(DW_OP_addr 0x41d)
+
+0x00000067:   DW_TAG_array_type [3] *
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x003f => {0x0000003f} "char")
+
+0x0000006c:     DW_TAG_subrange_type [4]  
+                  DW_AT_type [DW_FORM_ref4]	(cu + 0x0046 => {0x00000046} "__ARRAY_SIZE_TYPE__")
+                  DW_AT_count [DW_FORM_data1]	(0x03)
+
+0x00000072:     NULL
+
+0x00000073:   DW_TAG_variable [2]  
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x0080 => {0x00000080} "char[5]")
+                DW_AT_decl_file [DW_FORM_data1]	("/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang/main.c")
+                DW_AT_decl_line [DW_FORM_data1]	(18)
+                DW_AT_location [DW_FORM_exprloc]	(DW_OP_addr 0x430)
+
+0x00000080:   DW_TAG_array_type [3] *
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x003f => {0x0000003f} "char")
+
+0x00000085:     DW_TAG_subrange_type [4]  
+                  DW_AT_type [DW_FORM_ref4]	(cu + 0x0046 => {0x00000046} "__ARRAY_SIZE_TYPE__")
+                  DW_AT_count [DW_FORM_data1]	(0x05)
+
+0x0000008b:     NULL
+
+0x0000008c:   DW_TAG_variable [2]  
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x0099 => {0x00000099} "char[9]")
+                DW_AT_decl_file [DW_FORM_data1]	("/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang/main.c")
+                DW_AT_decl_line [DW_FORM_data1]	(19)
+                DW_AT_location [DW_FORM_exprloc]	(DW_OP_addr 0x43e)
+
+0x00000099:   DW_TAG_array_type [3] *
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x003f => {0x0000003f} "char")
+
+0x0000009e:     DW_TAG_subrange_type [4]  
+                  DW_AT_type [DW_FORM_ref4]	(cu + 0x0046 => {0x00000046} "__ARRAY_SIZE_TYPE__")
+                  DW_AT_count [DW_FORM_data1]	(0x09)
+
+0x000000a4:     NULL
+
+0x000000a5:   DW_TAG_subprogram [7] *
+                DW_AT_low_pc [DW_FORM_addr]	(0x0000000000000059)
+                DW_AT_high_pc [DW_FORM_data4]	(0x00000164)
+                DW_AT_frame_base [DW_FORM_exprloc]	(DW_OP_WASM_location 0x0 +4, DW_OP_stack_value)
+                DW_AT_linkage_name [DW_FORM_strp]	( .debug_str[0x00000000] = "__main_argc_argv")
+                DW_AT_name [DW_FORM_strp]	( .debug_str[0x0000001a] = "main")
+                DW_AT_decl_file [DW_FORM_data1]	("/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang/main.c")
+                DW_AT_decl_line [DW_FORM_data1]	(5)
+                DW_AT_prototyped [DW_FORM_flag_present]	(true)
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x00ec => {0x000000ec} "int")
+                DW_AT_external [DW_FORM_flag_present]	(true)
+
+0x000000c1:     DW_TAG_formal_parameter [8]  
+                  DW_AT_location [DW_FORM_exprloc]	(DW_OP_fbreg +56)
+                  DW_AT_name [DW_FORM_strp]	( .debug_str[0x0000006b] = "argc")
+                  DW_AT_decl_file [DW_FORM_data1]	("/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang/main.c")
+                  DW_AT_decl_line [DW_FORM_data1]	(5)
+                  DW_AT_type [DW_FORM_ref4]	(cu + 0x00ec => {0x000000ec} "int")
+
+0x000000cf:     DW_TAG_formal_parameter [8]  
+                  DW_AT_location [DW_FORM_exprloc]	(DW_OP_fbreg +52)
+                  DW_AT_name [DW_FORM_strp]	( .debug_str[0x0000000c] = "argv")
+                  DW_AT_decl_file [DW_FORM_data1]	("/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang/main.c")
+                  DW_AT_decl_line [DW_FORM_data1]	(5)
+                  DW_AT_type [DW_FORM_ref4]	(cu + 0x00f3 => {0x000000f3} "char**")
+
+0x000000dd:     DW_TAG_variable [9]  
+                  DW_AT_location [DW_FORM_exprloc]	(DW_OP_fbreg +48)
+                  DW_AT_name [DW_FORM_strp]	( .debug_str[0x00000067] = "buf")
+                  DW_AT_decl_file [DW_FORM_data1]	("/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang/main.c")
+                  DW_AT_decl_line [DW_FORM_data1]	(7)
+                  DW_AT_type [DW_FORM_ref4]	(cu + 0x00f8 => {0x000000f8} "char*")
+
+0x000000eb:     NULL
+
+0x000000ec:   DW_TAG_base_type [5]  
+                DW_AT_name [DW_FORM_strp]	( .debug_str[0x00000011] = "int")
+                DW_AT_encoding [DW_FORM_data1]	(DW_ATE_signed)
+                DW_AT_byte_size [DW_FORM_data1]	(0x04)
+
+0x000000f3:   DW_TAG_pointer_type [10]  
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x00f8 => {0x000000f8} "char*")
+
+0x000000f8:   DW_TAG_pointer_type [10]  
+                DW_AT_type [DW_FORM_ref4]	(cu + 0x003f => {0x0000003f} "char")
+
+0x000000fd:   NULL
+
+.debug_line contents:
+debug_line[0x00000000]
+Line table prologue:
+    total_length: 0x00000081
+         version: 4
+ prologue_length: 0x0000001e
+ min_inst_length: 1
+max_ops_per_inst: 1
+ default_is_stmt: 1
+       line_base: -5
+      line_range: 14
+     opcode_base: 13
+standard_opcode_lengths[DW_LNS_copy] = 0
+standard_opcode_lengths[DW_LNS_advance_pc] = 1
+standard_opcode_lengths[DW_LNS_advance_line] = 1
+standard_opcode_lengths[DW_LNS_set_file] = 1
+standard_opcode_lengths[DW_LNS_set_column] = 1
+standard_opcode_lengths[DW_LNS_negate_stmt] = 0
+standard_opcode_lengths[DW_LNS_set_basic_block] = 0
+standard_opcode_lengths[DW_LNS_const_add_pc] = 0
+standard_opcode_lengths[DW_LNS_fixed_advance_pc] = 1
+standard_opcode_lengths[DW_LNS_set_prologue_end] = 0
+standard_opcode_lengths[DW_LNS_set_epilogue_begin] = 0
+standard_opcode_lengths[DW_LNS_set_isa] = 1
+file_names[  1]:
+           name: "main.c"
+      dir_index: 0
+       mod_time: 0x00000000
+         length: 0x00000000
+0x00000028: 00 DW_LNE_set_address (0x0000000000000059)
+0x0000002f: 17 address += 0,  line += 5
+            0x0000000000000059      6      0      1   0             0  is_stmt
+
+0x00000030: 05 DW_LNS_set_column (11)
+0x00000032: 0a DW_LNS_set_prologue_end
+0x00000033: 02 DW_LNS_advance_pc (56)
+0x00000035: 15 address += 0,  line += 3
+            0x0000000000000091      9     11      1   0             0  is_stmt prologue_end
+
+0x00000036: 05 DW_LNS_set_column (9)
+0x00000038: 06 DW_LNS_negate_stmt
+0x00000039: e4 address += 15,  line += 0
+            0x00000000000000a0      9      9      1   0             0 
+
+0x0000003a: 05 DW_LNS_set_column (35)
+0x0000003c: 06 DW_LNS_negate_stmt
+0x0000003d: 76 address += 7,  line += 2
+            0x00000000000000a7     11     35      1   0             0  is_stmt
+
+0x0000003e: 05 DW_LNS_set_column (5)
+0x00000040: 06 DW_LNS_negate_stmt
+0x00000041: 74 address += 7,  line += 0
+            0x00000000000000ae     11      5      1   0             0 
+
+0x00000042: 05 DW_LNS_set_column (10)
+0x00000044: 06 DW_LNS_negate_stmt
+0x00000045: 02 DW_LNS_advance_pc (37)
+0x00000047: 14 address += 0,  line += 2
+            0x00000000000000d3     13     10      1   0             0  is_stmt
+
+0x00000048: 05 DW_LNS_set_column (9)
+0x0000004a: 06 DW_LNS_negate_stmt
+0x0000004b: 08 DW_LNS_const_add_pc (0x0000000000000011)
+0x0000004c: 90 address += 9,  line += 0
+            0x00000000000000ed     13      9      1   0             0 
+
+0x0000004d: 06 DW_LNS_negate_stmt
+0x0000004e: 08 DW_LNS_const_add_pc (0x0000000000000011)
+0x0000004f: 2f address += 2,  line += 1
+            0x0000000000000100     14      9      1   0             0  is_stmt
+
+0x00000050: 08 DW_LNS_const_add_pc (0x0000000000000011)
+0x00000051: 67 address += 6,  line += 1
+            0x0000000000000117     15      9      1   0             0  is_stmt
+
+0x00000052: 06 DW_LNS_negate_stmt
+0x00000053: 03 DW_LNS_advance_line (0)
+0x00000055: c8 address += 13,  line += 0
+            0x0000000000000124      0      9      1   0             0 
+
+0x00000056: 05 DW_LNS_set_column (14)
+0x00000058: 06 DW_LNS_negate_stmt
+0x00000059: 03 DW_LNS_advance_line (18)
+0x0000005b: 20 address += 1,  line += 0
+            0x0000000000000125     18     14      1   0             0  is_stmt
+
+0x0000005c: 05 DW_LNS_set_column (5)
+0x0000005e: 06 DW_LNS_negate_stmt
+0x0000005f: 74 address += 7,  line += 0
+            0x000000000000012c     18      5      1   0             0 
+
+0x00000060: 05 DW_LNS_set_column (25)
+0x00000062: 06 DW_LNS_negate_stmt
+0x00000063: 02 DW_LNS_advance_pc (43)
+0x00000065: 13 address += 0,  line += 1
+            0x0000000000000157     19     25      1   0             0  is_stmt
+
+0x00000066: 05 DW_LNS_set_column (5)
+0x00000068: 06 DW_LNS_negate_stmt
+0x00000069: 74 address += 7,  line += 0
+            0x000000000000015e     19      5      1   0             0 
+
+0x0000006a: 05 DW_LNS_set_column (10)
+0x0000006c: 06 DW_LNS_negate_stmt
+0x0000006d: 02 DW_LNS_advance_pc (37)
+0x0000006f: 14 address += 0,  line += 2
+            0x0000000000000183     21     10      1   0             0  is_stmt
+
+0x00000070: 05 DW_LNS_set_column (5)
+0x00000072: 06 DW_LNS_negate_stmt
+0x00000073: 74 address += 7,  line += 0
+            0x000000000000018a     21      5      1   0             0 
+
+0x00000074: 06 DW_LNS_negate_stmt
+0x00000075: 83 address += 8,  line += 1
+            0x0000000000000192     22      5      1   0             0  is_stmt
+
+0x00000076: 06 DW_LNS_negate_stmt
+0x00000077: 03 DW_LNS_advance_line (0)
+0x00000079: ac address += 11,  line += 0
+            0x000000000000019d      0      5      1   0             0 
+
+0x0000007a: 05 DW_LNS_set_column (1)
+0x0000007c: 06 DW_LNS_negate_stmt
+0x0000007d: 03 DW_LNS_advance_line (23)
+0x0000007f: 20 address += 1,  line += 0
+            0x000000000000019e     23      1      1   0             0  is_stmt
+
+0x00000080: 02 DW_LNS_advance_pc (31)
+0x00000082: 00 DW_LNE_end_sequence
+            0x00000000000001bd     23      1      1   0             0  is_stmt end_sequence
+
+
+.debug_str contents:
+0x00000000: "__main_argc_argv"
+0x00000011: "int"
+0x00000015: "char"
+0x0000001a: "main"
+0x0000001f: "/home/agent/WASM/test-dwarf/tmp/binaryen/wasm-sourcemap-dump/test-clang"
+0x00000067: "buf"
+0x0000006b: "argc"
+0x00000070: "main.c"
+0x00000077: "__ARRAY_SIZE_TYPE__"
+0x0000008b: "clang version 18.1.2 (https://github.com/llvm/llvm-project 26a1d6601d727a96f4301d0d8647b5a42760ae0c)"
