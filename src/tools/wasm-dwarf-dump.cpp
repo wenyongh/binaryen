@@ -15,7 +15,7 @@
  */
 
 //
-// wasm2asm console tool
+// wasm-dwarf-dump console tool
 //
 
 #include "support/colors.h"
@@ -30,26 +30,9 @@ using namespace wasm;
 
 int main(int argc, const char* argv[]) {
   std::string sourceMapFilename;
-  Options options("wasm-dis",
-                  "Un-assemble a .wasm (WebAssembly binary format) into a "
-                  ".wat (WebAssembly text format)");
+  Options options("wasm-dwarf-dump",
+                  "Dump DWARF debug info of a .wasm file");
   options
-    .add("--output",
-         "-o",
-         "Output file (stdout if not specified)",
-         Options::Arguments::One,
-         [](Options* o, const std::string& argument) {
-           o->extra["output"] = argument;
-           Colors::setEnabled(false);
-         })
-    .add(
-      "--source-map",
-      "-sm",
-      "Consume source map from the specified file to add location information",
-      Options::Arguments::One,
-      [&sourceMapFilename](Options* o, const std::string& argument) {
-        sourceMapFilename = argument;
-      })
     .add_positional("INFILE",
                     Options::Arguments::One,
                     [](Options* o, const std::string& argument) {
@@ -57,9 +40,6 @@ int main(int argc, const char* argv[]) {
                     });
   options.parse(argc, argv);
 
-  if (options.debug) {
-    std::cerr << "parsing binary..." << std::endl;
-  }
   Module wasm;
   try {
     ModuleReader().readBinary(options.extra["infile"], wasm, sourceMapFilename);
@@ -73,15 +53,5 @@ int main(int argc, const char* argv[]) {
     Fatal() << "error in parsing wasm source mapping";
   }
 
-  if (options.debug) {
-    std::cerr << "Printing..." << std::endl;
-  }
-  Output output(options.extra["output"], Flags::Text);
-  WasmPrinter::printModule(&wasm, output.getStream());
-  output << '\n';
-
   wasm::Debug::dumpDWARF(wasm);
-  if (options.debug) {
-    std::cerr << "Done." << std::endl;
-  }
 }
